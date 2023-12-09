@@ -1,8 +1,8 @@
 import React from "react";
 import Input from "../Input/Input.jsx";
 
-const EmailInput = ({ label, ...props }) => {
-  return <Input label={label} {...props} type="email" />;
+const EmailInput = ({ ...props }) => {
+  return <Input {...props} type="email" />;
 };
 
 export default EmailInput;
