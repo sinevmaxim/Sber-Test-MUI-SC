@@ -1,13 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 import { useForm } from "react-hook-form";
+import styled from "styled-components";
 
 import Input from "../UI/Input/Input.jsx";
 import SendButton from "../UI/SendButton/SendButton.jsx";
 import PhoneInput from "../UI/PhoneInput/PhoneInput.jsx";
 import EmailInput from "../UI/EmailInput/EmailInput.jsx";
 import MessageInput from "../UI/MessageInput/MessageInput.jsx";
-import { Grid, Typography } from "@mui/material";
+
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 
 const StyledForm = styled.form`
   padding: 4rem;
@@ -18,14 +20,14 @@ const StyledForm = styled.form`
   grid-template-columns: repeat(2, 1fr);
 `;
 
-const Form = () => {
+const Form = ({ messages, setMessages }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
 
+  const onSubmit = (data) => setMessages([...messages, data]);
   return (
     <StyledForm onSubmit={handleSubmit(onSubmit)}>
       <Grid container spacing={4}>

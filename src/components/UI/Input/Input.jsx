@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField } from "@mui/material";
+import TextField from "@mui/material/TextField";
 
 const Input = ({ label = "", name, register, rules, ...props }) => {
   return (

@@ -1,5 +1,5 @@
-import Input from "../Input/Input.jsx";
 import React from "react";
+import Input from "../Input/Input.jsx";
 
 const MessageInput = (props) => {
   return <Input multiline rows={4} {...props} />;
