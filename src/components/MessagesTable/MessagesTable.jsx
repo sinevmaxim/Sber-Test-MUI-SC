@@ -13,8 +13,7 @@ const MessagesTable = ({ messages }) => {
         maxWidth: 800,
         margin: "0 auto 50px auto",
         backgroundColor: "white",
-        padding: "4rem",
-        borderRadius: " 16px",
+        borderRadius: "16px",
       }}
     >
       <TableHead>
