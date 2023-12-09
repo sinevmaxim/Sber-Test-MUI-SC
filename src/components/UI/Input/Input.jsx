@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { TextField } from "@mui/material";
 
 const Input = ({ label = "", name, register, rules, ...props }) => {
